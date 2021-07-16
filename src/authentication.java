@@ -125,7 +125,10 @@ ResultSet rs;
             pst.setString(2, jPasswordField1.getText());
             rs = pst.executeQuery();
             if(rs.next()){
-                JOptionPane.showMessageDialog(this, "Login Succesfully");
+//                JOptionPane.showMessageDialog(this, "Login Succesfully");
+                setVisible(false);
+                Main ob = new Main();
+                ob.setVisible(true);
             }
             else{
                  JOptionPane.showMessageDialog(this, "Invalid Username or Password"+ rs.next());
@@ -134,6 +137,14 @@ ResultSet rs;
         }catch(Exception e){
             JOptionPane.showMessageDialog(this,"Query Error" + e.getMessage());
         }
+        finally{
+         try{
+             rs.close();
+             pst.close();
+         }catch(Exception e){
+//         JOptionPane.showMessageDialog(this, e);
+     }
+     }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
