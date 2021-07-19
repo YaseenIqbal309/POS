@@ -56,6 +56,7 @@ public int getBal(){
           
           jTextField2.setText(+DAY+"-"+(month+1)+"-"+year);
           jTextField10.setText(+DAY+"-"+(month+1)+"-"+year);
+          jTextField18.setText(+DAY+"-"+(month+1)+"-"+year);
     }
     public Main() {
         initComponents();
@@ -65,9 +66,10 @@ public int getBal(){
         setSelletCombo1();
         setTable();
         setTable1();
+        setTable2();
         setaddEnable();
         setaddEnable1();
-       
+        setaddEnable2();
     }
 
     /**
@@ -147,6 +149,20 @@ public int getBal(){
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         tab3 = new javax.swing.JPanel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField23 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -491,8 +507,8 @@ public int getBal(){
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
                         .addGap(0, 231, Short.MAX_VALUE)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(128, 128, 128)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(86, 86, 86)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(tab1Layout.createSequentialGroup()
                         .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -547,13 +563,10 @@ public int getBal(){
         tab1Layout.setVerticalGroup(
             tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab1Layout.createSequentialGroup()
-                .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tab1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel5)))
+                .addGap(24, 24, 24)
+                .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -744,7 +757,7 @@ public int getBal(){
             }
         });
 
-        jLabel24.setText("Bag Quantity");
+        jLabel24.setText("Bage Quantity");
 
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -818,8 +831,8 @@ public int getBal(){
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
                         .addGap(0, 216, Short.MAX_VALUE)
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(128, 128, 128)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(93, 93, 93)
+                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(tab2Layout.createSequentialGroup()
                         .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -877,13 +890,10 @@ public int getBal(){
         tab2Layout.setVerticalGroup(
             tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
-                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tab2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel17)))
+                .addGap(24, 24, 24)
+                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -903,36 +913,196 @@ public int getBal(){
                         .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel20)
-                                .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel18)
-                                .addComponent(jLabel22)
-                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton11)
-                                .addComponent(jButton9))
-                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel18)
+                            .addComponent(jLabel22)
+                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton11)
+                            .addComponent(jButton9))
+                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton12))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
+        jTextField18.setEditable(false);
+
+        jLabel27.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
+        jLabel27.setText("Stocks Details And Modification");
+
+        jTextField19.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField19KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField19KeyTyped(evt);
+            }
+        });
+
+        jDateChooser3.setDateFormatString("yyyy-MM-dd");
+
+        jLabel29.setText("Date:");
+
+        jLabel30.setText("Quantity");
+
+        jButton15.setText("Add");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-synchronize-12.png"))); // NOI18N
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Update");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete (1).png"))); // NOI18N
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Description");
+
+        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField23ActionPerformed(evt);
+            }
+        });
+        jTextField23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField23KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField23KeyTyped(evt);
+            }
+        });
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Date", "Yarn Quantiy", "Rate", "Total Prize", "Credit", "Debit", "Remaining Balance"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable3MouseClicked(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jTable3MouseReleased(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jTable3);
+        if (jTable3.getColumnModel().getColumnCount() > 0) {
+            jTable3.getColumnModel().getColumn(0).setResizable(false);
+            jTable3.getColumnModel().getColumn(1).setResizable(false);
+            jTable3.getColumnModel().getColumn(2).setResizable(false);
+            jTable3.getColumnModel().getColumn(3).setResizable(false);
+            jTable3.getColumnModel().getColumn(4).setResizable(false);
+            jTable3.getColumnModel().getColumn(5).setResizable(false);
+            jTable3.getColumnModel().getColumn(6).setResizable(false);
+        }
+
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
         tab3.setLayout(tab3Layout);
         tab3Layout.setHorizontalGroup(
             tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 846, Short.MAX_VALUE)
+            .addGroup(tab3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel30))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField19)
+                            .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tab3Layout.createSequentialGroup()
+                                .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(tab3Layout.createSequentialGroup()
+                                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         tab3Layout.setVerticalGroup(
             tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 538, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel27)
+                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel30)
+                                    .addComponent(jButton15))
+                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton17))
+                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18))
+                    .addGroup(tab3Layout.createSequentialGroup()
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -953,7 +1123,7 @@ public int getBal(){
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(tab2, javax.swing.GroupLayout.DEFAULT_SIZE, 541, Short.MAX_VALUE)))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addContainerGap()
@@ -1362,6 +1532,8 @@ public int getBal(){
 
     private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
         // TODO add your handling code here:
+        String q=jTextField9.getText();
+        filter1(q);
     }//GEN-LAST:event_jTextField9KeyReleased
 
     private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
@@ -1493,8 +1665,8 @@ public int getBal(){
             }catch(Exception e){
                 
             }
-        
     }
+          
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
@@ -1575,6 +1747,143 @@ public int getBal(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jTextField19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19KeyReleased
+
+    private void jTextField19KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19KeyTyped
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String sd = dateFormat.format(jDateChooser3.getDate());
+  
+        
+        try{
+            String sql = "insert into Stock(date,description,quantity) values(?,?,?)";
+            pst =conn.prepareStatement(sql);
+            pst.setString(1,sd);
+//            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
+            pst.setString(2, jTextField23.getText());
+            pst.setInt(3,Integer.parseInt(jTextField19.getText()));
+            pst.execute();
+            pst.close();
+            resetFields2();
+            setTable2();
+            JOptionPane.showMessageDialog(this, "Data Entered Succesfully");
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        finally{
+            try{
+                pst.close();
+                rs.close();
+            }catch(Exception e){
+                
+            }
+        }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        resetFields2();
+        setTable2();
+        setaddEnable2();
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+    try{
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String sd = dateFormat.format(jDateChooser3.getDate());
+        
+        String sql = "update Stock set date=?,description=?,quantity=? where id="+getSId();
+        pst = conn.prepareStatement(sql);
+        pst.setString(1, sd);
+        pst.setString(2, jTextField23.getText());
+        pst.setInt(3, Integer.parseInt(jTextField19.getText().toString()));
+        pst.executeUpdate();
+        pst.close();
+        resetFields2();
+        setTable2();
+        setaddEnable2();
+        JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
+
+ 
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }finally{
+            try{
+                pst.close();
+                rs.close();
+            }catch(Exception e){
+                
+            }
+    }
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+       try{
+        String sql = "delete from Stock where id="+getSId();
+        pst = conn.prepareStatement(sql);
+        pst.execute();
+        pst.close();
+        resetFields2();
+        setTable2();
+        setaddEnable2();
+        JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }finally{
+            try{
+                pst.close();
+                rs.close();
+            }catch(Exception e){
+                
+            }
+        }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23ActionPerformed
+
+    private void jTextField23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField23KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23KeyReleased
+
+    private void jTextField23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField23KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23KeyTyped
+
+    private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
+        // TODO add your handling code here:
+       dm=(DefaultTableModel) jTable3.getModel();
+       int i=0;
+       i=jTable3.getSelectedRow();
+       setSId(Integer.parseInt(dm.getValueAt(i,0).toString()));
+        try {
+            java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
+            jDateChooser3.setDate(dateFormat );
+        } catch (ParseException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
+        jTextField23.setText(dm.getValueAt(i, 2).toString());
+        jTextField19.setText(dm.getValueAt(i, 3).toString());
+        setaddDisable2();
+    }//GEN-LAST:event_jTable3MouseClicked
+
+    private void jTable3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable3MouseReleased
+
     public void resetFields(){
         jTextField3.setText("");
         jTextField4.setText("");
@@ -1595,8 +1904,17 @@ public int getBal(){
         jTextField13.setText("");
         jDateChooser2.setDate(null);
         
-        
+//        pst.setString(2, jTextField23.getText());
+//            pst.setInt(3,Integer.parseInt(jTextField19.getText()));
     }
+     
+      public void resetFields2(){
+        jTextField23.setText("");
+        jTextField19.setText("");
+        jDateChooser3.setDate(null);
+       
+    }
+     
      
      
      public void filter(String Q){
@@ -1605,6 +1923,20 @@ public int getBal(){
         
         tr.setRowFilter(RowFilter.regexFilter(Q));
         jTable1.setRowSorter(tr);
+    }
+    public void filter1(String Q){
+        dm=(DefaultTableModel)jTable2.getModel();
+        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
+        
+        tr.setRowFilter(RowFilter.regexFilter(Q));
+        jTable2.setRowSorter(tr);
+    }
+    public void filter2(String Q){
+        dm=(DefaultTableModel)jTable3.getModel();
+        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
+        
+        tr.setRowFilter(RowFilter.regexFilter(Q));
+        jTable3.setRowSorter(tr);
     }
     public void setaddDisable(){
         jButton2.setEnabled(true);
@@ -1626,6 +1958,17 @@ public int getBal(){
         jButton9.setEnabled(true);
         jButton12.setEnabled(false);
     } 
+    
+    public void setaddDisable2(){
+        jButton17.setEnabled(true);
+        jButton18.setEnabled(true);
+        jButton15.setEnabled(false);
+    } 
+    public void setaddEnable2(){
+        jButton17.setEnabled(false);
+        jButton15.setEnabled(true);
+        jButton18.setEnabled(false);
+    }
     public void setTable(){
           try{
             
@@ -1716,6 +2059,51 @@ public int getBal(){
                 
           }
               jTable2.setModel(mode);
+              
+            rs.close();
+           pst.close();
+            
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+        finally{
+         try{
+             rs.close();
+             pst.close();
+         }catch(Exception e){
+//         JOptionPane.showMessageDialog(this, e);
+     }
+     }
+    }
+    
+        public void setTable2(){
+          try{
+            
+     
+            
+            String sql = "select * from Stock";
+
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+
+            DefaultTableModel mode = new DefaultTableModel();
+            mode.setColumnIdentifiers(new Object[]{"ID","Date","Description","Quantity"});
+            Object[] row = new Object[8];
+//            System.out.println(rs.getArray("id"));
+//            rs.close();
+         
+//            ArrayList list = (ArrayList) rs;
+//            System.out.println(list);
+         while(rs.next()){
+                row[0] = rs.getString("id");
+                row[1] = rs.getString("date");
+                row[2] = rs.getString("description");
+                row[3] = rs.getString("quantity");
+                mode.addRow(row);
+                
+          }
+              jTable3.setModel(mode);
               
             rs.close();
            pst.close();
@@ -1847,6 +2235,10 @@ public int getBal(){
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1859,6 +2251,7 @@ public int getBal(){
     private javax.swing.JComboBox<String> jComboBox2;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private com.toedter.calendar.JDateChooser jDateChooser2;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1876,7 +2269,11 @@ public int getBal(){
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1890,8 +2287,10 @@ public int getBal(){
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -1900,7 +2299,10 @@ public int getBal(){
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
