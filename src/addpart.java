@@ -48,7 +48,7 @@ ResultSet rs;
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Add new party", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
-        jLabel1.setText("Name:");
+        jLabel1.setText("Name(must be uique):");
 
         jLabel2.setText("Party Type (Seller or Buyer):");
 
@@ -81,22 +81,18 @@ ResultSet rs;
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField1)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 141, Short.MAX_VALUE))))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1)
+                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 141, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,8 +152,11 @@ ResultSet rs;
         pst = conn.prepareStatement(sql);
         pst.setString(1,jTextField1.getText());
         pst.setString(2,jComboBox1.getSelectedItem().toString());
+        
         pst.execute();
-        JOptionPane.showMessageDialog(this,"Succesfully Entered");
+        pst.close();
+        JOptionPane.showMessageDialog(this,"Date Entered Succesfully");
+        insertBalance(jTextField1.getText());
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(this, e.getMessage());
@@ -174,6 +173,44 @@ ResultSet rs;
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public void insertBalance(String name){
+        try{
+            int id = Integer.parseInt(getPartyId(name));
+            String sql = "insert into Balance(Balance,parties_id) values(?,?)";
+            pst = conn.prepareStatement(sql);
+            
+            pst.setInt(1, 0);
+            pst.setInt(2, id);
+            pst.execute();
+            pst.close();
+            
+            
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this,e.getMessage());
+        }
+    }
+    public String getPartyId(String name){
+        try{
+            String sql = "select * from parties where name=?";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1,name);
+            rs = pst.executeQuery();
+            return rs.getString("id");
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this,"Error");
+        }
+        finally{
+         try{
+             rs.close();
+             pst.close();
+         }catch(Exception e){
+//         JOptionPane.showMessageDialog(this, e);
+     }
+     }
+        return null;
+    }
     /**
      * @param args the command line arguments
      */
