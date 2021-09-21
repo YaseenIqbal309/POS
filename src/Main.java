@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.logging.Level; 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Date;
 import javax.swing.JTextField;
@@ -25,56 +25,63 @@ import javax.swing.JTable;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author admin
  */
 public class Main extends javax.swing.JFrame {
 
-Connection conn;
-PreparedStatement pst;
-ResultSet rs;
-DefaultTableModel dm;
-int sr_id;
-double balance;
-double general_balance;
+    Connection conn;
+    PreparedStatement pst;
+    ResultSet rs;
+    DefaultTableModel dm;
+    int sr_id;
+    double balance;
+    double general_balance;
+
     /**
      * Creates new form Main
      */
-public void setSId(int id){
-    this.sr_id = id;
-}
-public int getSId(){
-    return sr_id;
-    
-}
-public void setBal(double bal){
-    this.balance = bal;
-}
-public double getBal(){
-    return balance;
-}
-public void set_General_Bal(double bal){
-    this.general_balance = bal;
-    
-}
-public double get_General_Bal(){
-    return general_balance;
-}
- public void Calender(){
-        Calendar cal=new GregorianCalendar();
-        int month=cal.get(Calendar.MONTH);
-         int year=cal.get(Calendar.YEAR);
-          int DAY=cal.get(Calendar.DAY_OF_MONTH);
-          
-          jTextField2.setText(+DAY+"-"+(month+1)+"-"+year);
-          jTextField10.setText(+DAY+"-"+(month+1)+"-"+year);
-          jTextField18.setText(+DAY+"-"+(month+1)+"-"+year);
-          jTextField25.setText(+DAY+"-"+(month+1)+"-"+year);
-                    jTextField24.setText(+DAY+"-"+(month+1)+"-"+year);
+    public void setSId(int id) {
+        this.sr_id = id;
+    }
+
+    public int getSId() {
+        return sr_id;
 
     }
+
+    public void setBal(double bal) {
+        this.balance = bal;
+    }
+
+    public double getBal() {
+        return balance;
+    }
+
+    public void set_General_Bal(double bal) {
+        this.general_balance = bal;
+
+    }
+
+    public double get_General_Bal() {
+        return general_balance;
+    }
+
+    public void Calender() {
+        Calendar cal = new GregorianCalendar();
+        int month = cal.get(Calendar.MONTH);
+        int year = cal.get(Calendar.YEAR);
+        int DAY = cal.get(Calendar.DAY_OF_MONTH);
+
+        jTextField2.setText(+DAY + "-" + (month + 1) + "-" + year);
+        jTextField10.setText(+DAY + "-" + (month + 1) + "-" + year);
+        jTextField18.setText(+DAY + "-" + (month + 1) + "-" + year);
+        jTextField25.setText(+DAY + "-" + (month + 1) + "-" + year);
+        jTextField24.setText(+DAY + "-" + (month + 1) + "-" + year);
+
+    }
+
     public Main() {
         initComponents();
         conn = Db.Conb();
@@ -89,7 +96,7 @@ public double get_General_Bal(){
         setaddEnable();
         setaddEnable1();
         disabletabs();
-       
+
         setaddEnable2();
     }
 
@@ -181,6 +188,16 @@ public double get_General_Bal(){
         jTextField16 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel47 = new javax.swing.JLabel();
+        jTextField36 = new javax.swing.JTextField();
+        textArea2 = new java.awt.TextArea();
+        jLabel48 = new javax.swing.JLabel();
+        jTextField37 = new javax.swing.JTextField();
+        jLabel49 = new javax.swing.JLabel();
+        jTextField38 = new javax.swing.JTextField();
+        jLabel50 = new javax.swing.JLabel();
+        jTextField39 = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
         tab3 = new javax.swing.JPanel();
         jTextField18 = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
@@ -193,9 +210,13 @@ public double get_General_Bal(){
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jLabel34 = new javax.swing.JLabel();
-        jTextField23 = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
+        jLabel41 = new javax.swing.JLabel();
+        jTextField32 = new javax.swing.JTextField();
+        textArea3 = new java.awt.TextArea();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField33 = new javax.swing.JTextField();
         tab4 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jTextField25 = new javax.swing.JTextField();
@@ -718,7 +739,7 @@ public double get_General_Bal(){
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jButton6)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(tab1Layout.createSequentialGroup()
                                                 .addGroup(tab1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                                     .addGroup(tab1Layout.createSequentialGroup()
@@ -798,7 +819,8 @@ public double get_General_Bal(){
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        tab2.setPreferredSize(new java.awt.Dimension(917, 654));
+        tab2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        tab2.setPreferredSize(new java.awt.Dimension(919, 656));
 
         jComboBox2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -844,7 +866,6 @@ public double get_General_Bal(){
 
         jLabel15.setText("Select Party");
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-show-property-24.png"))); // NOI18N
         jButton7.setText("Show");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -852,7 +873,6 @@ public double get_General_Bal(){
             }
         });
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButton8.setText("Add New");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -860,7 +880,6 @@ public double get_General_Bal(){
             }
         });
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-search-20.png"))); // NOI18N
         jLabel16.setText("Search");
 
         jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -887,7 +906,7 @@ public double get_General_Bal(){
 
         jLabel18.setText("Debit:");
 
-        jLabel19.setText("Date:");
+        jLabel19.setText("Invoice:");
 
         jLabel20.setText("Credit:");
 
@@ -915,7 +934,7 @@ public double get_General_Bal(){
             }
         });
 
-        jLabel23.setText("Total Prize(GST):");
+        jLabel23.setText("Total LBS:");
 
         jButton9.setText("Add");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -931,6 +950,11 @@ public double get_General_Bal(){
             }
         });
 
+        jTextField14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField14ActionPerformed(evt);
+            }
+        });
         jTextField14.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField14KeyTyped(evt);
@@ -951,7 +975,7 @@ public double get_General_Bal(){
             }
         });
 
-        jLabel24.setText("Bage Quantity");
+        jLabel24.setText("Bage Quantity:");
 
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -967,6 +991,11 @@ public double get_General_Bal(){
             }
         });
 
+        jTextField16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField16ActionPerformed(evt);
+            }
+        });
         jTextField16.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField16KeyReleased(evt);
@@ -1004,15 +1033,30 @@ public double get_General_Bal(){
             }
         });
         jScrollPane2.setViewportView(jTable2);
-        if (jTable2.getColumnModel().getColumnCount() > 0) {
-            jTable2.getColumnModel().getColumn(0).setResizable(false);
-            jTable2.getColumnModel().getColumn(1).setResizable(false);
-            jTable2.getColumnModel().getColumn(2).setResizable(false);
-            jTable2.getColumnModel().getColumn(3).setResizable(false);
-            jTable2.getColumnModel().getColumn(4).setResizable(false);
-            jTable2.getColumnModel().getColumn(5).setResizable(false);
-            jTable2.getColumnModel().getColumn(6).setResizable(false);
-        }
+
+        jLabel47.setText("Total Price(GST):");
+
+        jLabel48.setText("Description");
+
+        jLabel49.setText("Weight:");
+
+        jTextField38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField38ActionPerformed(evt);
+            }
+        });
+        jTextField38.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField38KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField38KeyTyped(evt);
+            }
+        });
+
+        jLabel50.setText("Total Price:");
+
+        jLabel51.setText("Date:");
 
         javax.swing.GroupLayout tab2Layout = new javax.swing.GroupLayout(tab2);
         tab2.setLayout(tab2Layout);
@@ -1021,119 +1065,165 @@ public double get_General_Bal(){
             .addGroup(tab2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab2Layout.createSequentialGroup()
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(3, 3, 3)
+                                .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextField39))
+                            .addGroup(tab2Layout.createSequentialGroup()
+                                .addComponent(jLabel19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel24)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab2Layout.createSequentialGroup()
+                                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, tab2Layout.createSequentialGroup()
+                                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(tab2Layout.createSequentialGroup()
+                                                .addGap(44, 44, 44)
+                                                .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jLabel22)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 24, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(tab2Layout.createSequentialGroup()
+                                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(tab2Layout.createSequentialGroup()
+                                        .addComponent(jLabel47)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(25, 25, 25)
+                                        .addComponent(jLabel51)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(tab2Layout.createSequentialGroup()
+                                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(tab2Layout.createSequentialGroup()
+                                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(jLabel49)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(35, 35, 35))
+                            .addGroup(tab2Layout.createSequentialGroup()
+                                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(tab2Layout.createSequentialGroup()
+                                        .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(27, 27, 27))
+                                    .addGroup(tab2Layout.createSequentialGroup()
+                                        .addGap(156, 156, 156)
+                                        .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(1, 1, 1))))
                     .addGroup(tab2Layout.createSequentialGroup()
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, 115, Short.MAX_VALUE)
-                            .addComponent(jTextField11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel22))
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(tab2Layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
-                                .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(tab2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(tab2Layout.createSequentialGroup()
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField14)
-                            .addGroup(tab2Layout.createSequentialGroup()
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 56, Short.MAX_VALUE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)))
-                .addContainerGap())
+                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(tab2Layout.createSequentialGroup()
+                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton8))
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE)
+                        .addComponent(textArea2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         tab2Layout.setVerticalGroup(
             tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addContainerGap()
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel15))
+                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton8)
+                        .addComponent(jButton7)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 29, Short.MAX_VALUE)
+                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(jTextField36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)
+                    .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel49)
+                    .addComponent(jTextField38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton8))
-                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel15)))
-                .addGap(18, 18, 18)
-                .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel21)
-                        .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTextField37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel23)
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
+                        .addComponent(jLabel50)
+                        .addComponent(jTextField39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel47)
+                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel18)
-                            .addComponent(jLabel22)
-                            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11)
-                            .addComponent(jButton9)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton11)
+                    .addGroup(tab2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel18)
+                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel22)
+                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton9)
+                        .addComponent(jLabel20)
+                        .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton12))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel48)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(textArea2, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
-        tab3.setPreferredSize(new java.awt.Dimension(917, 654));
-
         jTextField18.setEditable(false);
+        jTextField18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField18ActionPerformed(evt);
+            }
+        });
 
         jLabel27.setFont(new java.awt.Font("Calibri", 0, 24)); // NOI18N
         jLabel27.setText("Stocks Details And Modification");
@@ -1151,7 +1241,7 @@ public double get_General_Bal(){
 
         jLabel29.setText("Date:");
 
-        jLabel30.setText("Quantity");
+        jLabel30.setText("Output:");
 
         jButton15.setText("Add");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -1183,20 +1273,6 @@ public double get_General_Bal(){
 
         jLabel34.setText("Description");
 
-        jTextField23.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField23ActionPerformed(evt);
-            }
-        });
-        jTextField23.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                jTextField23KeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField23KeyTyped(evt);
-            }
-        });
-
         jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -1225,15 +1301,10 @@ public double get_General_Bal(){
             }
         });
         jScrollPane3.setViewportView(jTable3);
-        if (jTable3.getColumnModel().getColumnCount() > 0) {
-            jTable3.getColumnModel().getColumn(0).setResizable(false);
-            jTable3.getColumnModel().getColumn(1).setResizable(false);
-            jTable3.getColumnModel().getColumn(2).setResizable(false);
-            jTable3.getColumnModel().getColumn(3).setResizable(false);
-            jTable3.getColumnModel().getColumn(4).setResizable(false);
-            jTable3.getColumnModel().getColumn(5).setResizable(false);
-            jTable3.getColumnModel().getColumn(6).setResizable(false);
-        }
+
+        jLabel41.setText("Input:");
+
+        jLabel43.setText("Amount");
 
         javax.swing.GroupLayout tab3Layout = new javax.swing.GroupLayout(tab3);
         tab3.setLayout(tab3Layout);
@@ -1244,33 +1315,41 @@ public double get_General_Bal(){
                 .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(tab3Layout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 170, Short.MAX_VALUE)
-                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel30))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField19)
-                            .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(tab3Layout.createSequentialGroup()
-                                .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(209, 209, 209)
+                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(tab3Layout.createSequentialGroup()
+                                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jTextField33)
+                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createSequentialGroup()
+                                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(tab3Layout.createSequentialGroup()
+                                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel30)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, 501, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(tab3Layout.createSequentialGroup()
-                                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textArea3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         tab3Layout.setVerticalGroup(
@@ -1282,27 +1361,30 @@ public double get_General_Bal(){
                     .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(tab3Layout.createSequentialGroup()
                         .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel30)
+                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel30)
-                                    .addComponent(jButton15))
-                                .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton17))
-                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(18, 18, 18))
-                    .addGroup(tab3Layout.createSequentialGroup()
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tab3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton15)
+                                .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextField33, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButton18, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton17)
+                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 12, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(textArea3, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1591,16 +1673,8 @@ public double get_General_Bal(){
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addComponent(tab1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tab1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addComponent(tab2, javax.swing.GroupLayout.PREFERRED_SIZE, 918, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 9, Short.MAX_VALUE)))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addComponent(tab3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addComponent(tab4, javax.swing.GroupLayout.PREFERRED_SIZE, 912, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1609,20 +1683,34 @@ public double get_General_Bal(){
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addComponent(tab5, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap()))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(tab2, javax.swing.GroupLayout.DEFAULT_SIZE, 909, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(tab1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(tab2, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(tab3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(tab4, javax.swing.GroupLayout.DEFAULT_SIZE, 665, Short.MAX_VALUE))
+                .addComponent(tab4, javax.swing.GroupLayout.DEFAULT_SIZE, 713, Short.MAX_VALUE))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(tab5, javax.swing.GroupLayout.PREFERRED_SIZE, 665, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(28, 28, 28)
+                    .addComponent(tab2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(29, 29, 29)))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(83, 83, 83)
+                    .addComponent(tab3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(84, 84, 84)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1662,15 +1750,14 @@ public double get_General_Bal(){
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        
+
 //   JOptionPane.showMessageDialog(this,jComboBox1.getSelectedIndex() );
 
-       
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -1695,61 +1782,59 @@ public double get_General_Bal(){
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String sd = dateFormat.format(jDateChooser1.getDate());
         String partyName = (String) jComboBox1.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-        
-        try{
-             String sql = "insert into Selling(date,yarn_quantity,rate,total_price,credit,debit,remaining_balance,party_id,Description,invoice,price) values(?,?,?,?,?,?,?,?,?,?,?)";
-            pst =conn.prepareStatement(sql);
-            pst.setString(1,sd);
+        int id = Integer.parseInt(getPartyId(partyName));
+
+        try {
+            String sql = "insert into Selling(date,yarn_quantity,rate,total_price,credit,debit,remaining_balance,party_id,Description,invoice,price) values(?,?,?,?,?,?,?,?,?,?,?)";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
 //            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
-            pst.setDouble(2,Double.parseDouble(jTextField3.getText()));
-            pst.setDouble(3,Double.parseDouble(jTextField4.getText()));
-            pst.setDouble(4,Double.parseDouble(jTextField5.getText()));
-            pst.setDouble(5,Double.parseDouble(jTextField6.getText()));
-            pst.setDouble(6,Double.parseDouble(jTextField7.getText()));
-            pst.setDouble(7,Double.parseDouble(jTextField8.getText()));
-            
-            pst.setString(9,jTextArea1.getText());
-            pst.setString(10,jTextField22.getText());
-            pst.setString(11,jTextField21.getText());
-            pst.setInt(8,id);
+            pst.setDouble(2, Double.parseDouble(jTextField3.getText()));
+            pst.setDouble(3, Double.parseDouble(jTextField4.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField5.getText()));
+            pst.setDouble(5, Double.parseDouble(jTextField6.getText()));
+            pst.setDouble(6, Double.parseDouble(jTextField7.getText()));
+            pst.setDouble(7, Double.parseDouble(jTextField8.getText()));
+
+            pst.setString(9, jTextArea1.getText());
+            pst.setString(10, jTextField22.getText());
+            pst.setString(11, jTextField21.getText());
+            pst.setInt(8, id);
             pst.execute();
             pst.close();
             String updateBalance = "update Balance set balance=? where parties_id=?";
-                    pst = conn.prepareStatement(updateBalance);
-                    pst.setDouble(1, Double.parseDouble(jTextField8.getText()));
-                    pst.setInt(2, id);
-                    pst.executeUpdate();
-                    pst.close();
-               //     updateBalanceSheet(getBal(),Integer.parseInt(jTextField6.getText()),Integer.parseInt(jTextField7.getText()),id);
+            pst = conn.prepareStatement(updateBalance);
+            pst.setDouble(1, Double.parseDouble(jTextField8.getText()));
+            pst.setInt(2, id);
+            pst.executeUpdate();
+            pst.close();
+            //     updateBalanceSheet(getBal(),Integer.parseInt(jTextField6.getText()),Integer.parseInt(jTextField7.getText()),id);
             resetFields();
             setTable();
             JOptionPane.showMessageDialog(this, "Data Entered Succesfully");
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
-       
-      
-      
+
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jComboBox1PopupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_jComboBox1PopupMenuWillBecomeInvisible
         // TODO add your handling code here:
-      
+
     }//GEN-LAST:event_jComboBox1PopupMenuWillBecomeInvisible
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     private void jComboBox1CaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jComboBox1CaretPositionChanged
@@ -1757,32 +1842,31 @@ public double get_General_Bal(){
     }//GEN-LAST:event_jComboBox1CaretPositionChanged
 
     private void jComboBox1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jComboBox1MouseClicked
-            // TODO add your handling code here:
-            
+        // TODO add your handling code here:
+
     }//GEN-LAST:event_jComboBox1MouseClicked
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         setTable();
-        
-        
+
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
-      
-        
-        dm=(DefaultTableModel) jTable1.getModel();
-         int i=0;
-       i=jTable1.getSelectedRow();
-       setSId(Integer.parseInt(dm.getValueAt(i,0).toString()));
+
+        dm = (DefaultTableModel) jTable1.getModel();
+        int i = 0;
+        i = jTable1.getSelectedRow();
+        setSId(Integer.parseInt(dm.getValueAt(i, 0).toString()));
         try {
             java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
-            jDateChooser1.setDate(dateFormat );
+            jDateChooser1.setDate(dateFormat);
         } catch (ParseException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
+
         jTextField3.setText(dm.getValueAt(i, 2).toString());
         jTextField4.setText(dm.getValueAt(i, 3).toString());
         jTextField21.setText(dm.getValueAt(i, 4).toString());
@@ -1794,61 +1878,60 @@ public double get_General_Bal(){
 
         jTextArea1.setText(dm.getValueAt(i, 10).toString());
 
-
         setaddDisable();
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void jTextField3KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField3KeyTyped
 
     private void jTextField4KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyTyped
         // TODO add your handling code here:
-        char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField4KeyTyped
 
     private void jTextField5KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField5KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField5KeyTyped
 
     private void jTextField6KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField6KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField6KeyTyped
 
     private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField7KeyTyped
 
     private void jTextField8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE|| c==KeyEvent.VK_PERIOD)){
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_PERIOD)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField8KeyTyped
 
     private void jTable1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseReleased
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_jTable1MouseReleased
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1857,117 +1940,111 @@ public double get_General_Bal(){
         setSelletCombo();
         setTable();
         setaddEnable();
-        
-        
+
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        try{
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String sd = dateFormat.format(jDateChooser1.getDate());
-        String partyName = (String) jComboBox1.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-        String sql = "update Selling set date=?,yarn_quantity=?,rate=?,total_price=?,credit=?,debit=?,remaining_balance=?,party_id=?,description=?,price=?,invoice=?  where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.setString(1, sd);
-            pst.setDouble(2,Double.parseDouble(jTextField3.getText()));
-            pst.setDouble(3,Double.parseDouble(jTextField4.getText()));
-            pst.setDouble(4,Double.parseDouble(jTextField5.getText()));
-            pst.setDouble(5,Double.parseDouble(jTextField6.getText()));
-            pst.setDouble(6,Double.parseDouble(jTextField7.getText()));
-            pst.setDouble(7,Double.parseDouble(jTextField8.getText()));
-            
-            pst.setString(9,jTextArea1.getText());
-            pst.setString(10,jTextField22.getText());
-            pst.setString(11,jTextField21.getText());
-            pst.setInt(8,id);
-                
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String sd = dateFormat.format(jDateChooser1.getDate());
+            String partyName = (String) jComboBox1.getSelectedItem();
+            int id = Integer.parseInt(getPartyId(partyName));
+            String sql = "update Selling set date=?,yarn_quantity=?,rate=?,total_price=?,credit=?,debit=?,remaining_balance=?,party_id=?,description=?,price=?,invoice=?  where id=" + getSId();
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            pst.setDouble(2, Double.parseDouble(jTextField3.getText()));
+            pst.setDouble(3, Double.parseDouble(jTextField4.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField5.getText()));
+            pst.setDouble(5, Double.parseDouble(jTextField6.getText()));
+            pst.setDouble(6, Double.parseDouble(jTextField7.getText()));
+            pst.setDouble(7, Double.parseDouble(jTextField8.getText()));
+
+            pst.setString(9, jTextArea1.getText());
+            pst.setString(10, jTextField22.getText());
+            pst.setString(11, jTextField21.getText());
+            pst.setInt(8, id);
+
+            pst.executeUpdate();
+            pst.close();
+            int dialogButton = JOptionPane.YES_NO_OPTION;
+            int dialogResult = JOptionPane.showConfirmDialog(null, "Would You Like to Update Balance also", "Warning", dialogButton);
+            if (dialogResult == JOptionPane.YES_OPTION) {
+                // Saving code here
+                String updateBalance = "update Balance set balance=? where parties_id=?";
+                pst = conn.prepareStatement(updateBalance);
+                pst.setInt(1, Integer.parseInt(jTextField8.getText()));
+                pst.setInt(2, id);
                 pst.executeUpdate();
                 pst.close();
-                 int dialogButton = JOptionPane.YES_NO_OPTION;
-                 int dialogResult = JOptionPane.showConfirmDialog (null, "Would You Like to Update Balance also","Warning",dialogButton);
-                    if(dialogResult == JOptionPane.YES_OPTION){
-                            // Saving code here
-                             String updateBalance = "update Balance set balance=? where parties_id=?";
-                    pst = conn.prepareStatement(updateBalance);
-                    pst.setInt(1, Integer.parseInt(jTextField8.getText()));
-                    pst.setInt(2, id);
-                    pst.executeUpdate();
-                    pst.close();
-                        }
-                resetFields();
+            }
+            resetFields();
             setTable();
             JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
 
-       
-        
-            
-        }catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
-        
-    }
-         
-        
-        
-        
+
+        }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        
-        
-        try{
-        String sql = "delete from Selling where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.execute();
-        pst.close();
-        resetFields();
+
+        try {
+            String sql = "delete from Selling where id=" + getSId();
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+            pst.close();
+            resetFields();
             setTable();
             JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
-        
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField4KeyReleased
         // TODO add your handling code here:
-       double qty =Double.parseDouble(jTextField3.getText());
-       double rate =Double.parseDouble( jTextField4.getText());
-       double gst = (17*(qty*rate))/100;
-       double price = qty*rate;
-       double price_GST = (qty*rate)+gst;
-       String result = String.valueOf(price_GST);
-       jTextField21.setText(String.valueOf(price));
+        double qty = Double.parseDouble(jTextField3.getText());
+        double rate = Double.parseDouble(jTextField4.getText());
+        double gst = (17 * (qty * rate)) / 100;
+        double price = qty * rate;
+        double price_GST = (qty * rate) + gst;
+        String result = String.valueOf(price_GST);
+        jTextField21.setText(String.valueOf(price));
         jTextField5.setText(result);
-        
+
     }//GEN-LAST:event_jTextField4KeyReleased
 
     private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
         // TODO add your handling code here:
-       double qty =Double.parseDouble(jTextField3.getText());
-       double rate =Double.parseDouble( jTextField4.getText());
-       double gst = (17*(qty*rate))/100;
-       double price = qty*rate;
-       double price_GST = (qty*rate)+gst;
-       String result = String.valueOf(price_GST);
-       jTextField21.setText(String.valueOf(price));
+        double qty = Double.parseDouble(jTextField3.getText());
+        double rate = Double.parseDouble(jTextField4.getText());
+        double gst = (17 * (qty * rate)) / 100;
+        double price = qty * rate;
+        double price_GST = (qty * rate) + gst;
+        String result = String.valueOf(price_GST);
+        jTextField21.setText(String.valueOf(price));
         jTextField5.setText(result);
     }//GEN-LAST:event_jTextField3KeyReleased
 
@@ -1976,30 +2053,29 @@ public double get_General_Bal(){
         double credit = Double.parseDouble(jTextField6.getText());
         double debit = Double.parseDouble(jTextField7.getText());
         double remBal = 0;
-        double total=0;
+        double total = 0;
 //         if(debit > getBal()){
 //            JOptionPane.showMessageDialog(this, "Debit must be smaller than Balance");
 //            jTextField7.setText("");
 //        }
-         if(jTextField7.getText() == null){
-             total = credit;
-         }
-         {
-             total = credit-debit;
-              remBal=getBal()+total;
-               jTextField8.setText(String.valueOf(remBal));
-         }
-            
-        
-       
+        if (jTextField7.getText() == null) {
+            total = credit;
+        }
+        {
+            total = credit - debit;
+            remBal = getBal() + total;
+            jTextField8.setText(String.valueOf(remBal));
+        }
+
+
     }//GEN-LAST:event_jTextField6KeyReleased
 
     private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
         // TODO add your handling code here:
-         double credit = Double.parseDouble(jTextField6.getText());
+        double credit = Double.parseDouble(jTextField6.getText());
         double debit = Double.parseDouble(jTextField7.getText());
         double remBal = 0;
-        double total=0;
+        double total = 0;
 //     
 //        if(debit > getBal()){
 //            JOptionPane.showMessageDialog(this, "Debit must be smaller than Balance" + getBal());
@@ -2007,21 +2083,311 @@ public double get_General_Bal(){
 //            jTextField8.setText(String.valueOf(getBal()));
 //        }
         {
-            total = credit-debit;
-        
-            remBal=getBal()+total;
+            total = credit - debit;
+
+            remBal = getBal() + total;
             jTextField8.setText(String.valueOf(remBal));
-            
+
         }
-       
-            
+
+
     }//GEN-LAST:event_jTextField7KeyReleased
 
     private void jTextField1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyReleased
         // TODO add your handling code here:
-        String q=jTextField1.getText();
+        String q = jTextField1.getText();
         filter(q);
     }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField26ActionPerformed
+
+    private void jTextField26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField26KeyReleased
+        // TODO add your handling code here:
+        String q = jTextField26.getText();
+        filter3(q);
+    }//GEN-LAST:event_jTextField26KeyReleased
+
+    private void jTable4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseClicked
+        // TODO add your handling code here:
+        dm = (DefaultTableModel) jTable4.getModel();
+        int i = 0;
+        i = jTable4.getSelectedRow();
+        jTextField17.setText(dm.getValueAt(i, 0).toString());
+        jTextField20.setText(dm.getValueAt(i, 1).toString());
+
+
+    }//GEN-LAST:event_jTable4MouseClicked
+
+    private void jTable4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTable4MouseReleased
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+
+        tab4.setVisible(true);
+        tab3.setVisible(false);
+        tab2.setVisible(false);
+        tab1.setVisible(false);
+        tab5.setVisible(false);
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "update Balance set Balance=? where id=?";
+            pst = conn.prepareStatement(sql);
+            pst.setString(2, jTextField17.getText());
+            pst.setString(1, jTextField20.getText());
+            //JOptionPane.showMessageDialog(this, jTextField17.getText() + jTextField20.getText());
+            pst.executeUpdate();
+            //pst.close();
+            setTable3();
+            resetFields3();
+            JOptionPane.showMessageDialog(this, "Updated Succesfully");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
+                pst.close();
+                rs.close();
+            } catch (Exception e) {
+
+            }
+        }
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "Delete  from Balance where id=?";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, jTextField17.getText());
+//            pst.setString(1,jTextField20.getText());
+            pst.execute();
+            pst.close();
+            setTable3();
+            resetFields3();
+            JOptionPane.showMessageDialog(this, "Deleted Succesfully");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
+                pst.close();
+                rs.close();
+            } catch (Exception e) {
+
+            }
+        }
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+        resetFields3();
+        setTable3();
+
+    }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
+        // TODO add your handling code here:
+        tab1.setVisible(true);
+        tab2.setVisible(false);
+        tab3.setVisible(false);
+        tab4.setVisible(false);
+        tab5.setVisible(false);
+    }//GEN-LAST:event_jButton21MouseClicked
+
+    private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
+        // TODO add your handling code here:
+        tab1.setVisible(false);
+        tab2.setVisible(true);
+        tab3.setVisible(false);
+        tab4.setVisible(false);
+        tab5.setVisible(false);
+    }//GEN-LAST:event_jButton22MouseClicked
+
+    private void jButton23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseClicked
+        // TODO add your handling code here:
+        tab1.setVisible(false);
+        tab2.setVisible(false);
+        tab3.setVisible(true);
+        tab4.setVisible(false);
+        tab5.setVisible(false);
+    }//GEN-LAST:event_jButton23MouseClicked
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21ActionPerformed
+
+    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField24ActionPerformed
+
+    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField27ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String sd = dateFormat.format(jDateChooser4.getDate());
+        try {
+
+            String sql = "insert into cashbook(date,credit,debit,balance,utilization,amount_utilized) values(?,?,?,?,?,?)";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            pst.setDouble(2, Double.parseDouble(jTextField28.getText()));
+            pst.setDouble(3, Double.parseDouble(jTextField29.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField30.getText()));
+
+            pst.setString(5, ((String) jComboBox3.getSelectedItem()));
+            pst.setDouble(6, Double.parseDouble(jTextField31.getText()));
+            pst.execute();
+            JOptionPane.showMessageDialog(this, "Data Added Succesfully");
+            pst.close();
+            String sql2 = "update genral_balance set date=? ,balance=?";
+            pst = conn.prepareStatement(sql2);
+            pst.setString(1, sd);
+
+            pst.setDouble(2, Double.parseDouble(jTextField30.getText()));
+            pst.executeUpdate();
+            pst.close();
+            setTable4();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_jButton25ActionPerformed
+
+    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
+        // TODO add your handling code here:
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String sd = dateFormat.format(jDateChooser4.getDate());
+
+        String sql = "update cashbook set date=?,credit=?,debit=?,balance=?,utilization=?,amount_utilized=?  where id=" + jTextField27.getText();
+        try {
+
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            pst.setDouble(2, Double.parseDouble(jTextField28.getText()));
+            pst.setDouble(3, Double.parseDouble(jTextField29.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField30.getText()));
+
+            pst.setString(5, ((String) jComboBox3.getSelectedItem()));
+            pst.setDouble(6, Double.parseDouble(jTextField31.getText()));
+            pst.execute();
+
+            pst.close();
+            String sql2 = "update genral_balance set date=? ,balance=?";
+            pst = conn.prepareStatement(sql2);
+            pst.setString(1, sd);
+
+            pst.setDouble(2, Double.parseDouble(jTextField30.getText()));
+            pst.executeUpdate();
+            pst.close();
+            setTable4();
+            JOptionPane.showMessageDialog(this, "Updated succesfully");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_jButton27ActionPerformed
+
+    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "delete from cashbook where id=" + jTextField27.getText();
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+
+
+    }//GEN-LAST:event_jButton28ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+        tab4.setVisible(false);
+        tab3.setVisible(false);
+        tab2.setVisible(false);
+        tab1.setVisible(false);
+        tab5.setVisible(true);
+    }//GEN-LAST:event_jButton24ActionPerformed
+
+    private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
+        // TODO add your handling code here:
+        dm = (DefaultTableModel) jTable5.getModel();
+        int i = 0;
+        i = jTable5.getSelectedRow();
+        jTextField27.setText(dm.getValueAt(i, 0).toString());
+        try {
+            java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
+            jDateChooser4.setDate(dateFormat);
+        } catch (ParseException ex) {
+            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jTextField28.setText(dm.getValueAt(i, 2).toString());
+        jTextField29.setText(dm.getValueAt(i, 3).toString());
+
+        jTextField30.setText(dm.getValueAt(i, 4).toString());
+        jTextField31.setText(dm.getValueAt(i, 6).toString());
+
+    }//GEN-LAST:event_jTable5MouseClicked
+
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        // TODO add your handling code here:
+        resetFields4();
+        setTable4();
+    }//GEN-LAST:event_jButton26ActionPerformed
+
+    private void jTextField28KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField28KeyReleased
+        // TODO add your handling code here:
+        double pre_balance = get_General_Bal();
+        double credit = Double.parseDouble(jTextField28.getText());
+        double debit = Double.parseDouble(jTextField29.getText());
+
+        double total = pre_balance + (credit - debit);
+        jTextField30.setText(Double.toString(total));
+    }//GEN-LAST:event_jTextField28KeyReleased
+
+    private void jTextField29KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField29KeyReleased
+        // TODO add your handling code here:
+        double pre_balance = get_General_Bal();
+        double credit = Double.parseDouble(jTextField28.getText());
+        double debit = Double.parseDouble(jTextField29.getText());
+
+        double total = pre_balance + (credit - debit);
+        jTextField30.setText(Double.toString(total));
+    }//GEN-LAST:event_jTextField29KeyReleased
+
+    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
+        // TODO add your handling code here:
+        printsell();
+    }//GEN-LAST:event_jButton29ActionPerformed
 
     private void jComboBox2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox2ItemStateChanged
         // TODO add your handling code here:
@@ -2060,112 +2426,88 @@ public double get_General_Bal(){
         // TODO add your handling code here:
         setVisible(false);
         addpart ob = new addpart();
-        ob.setVisible(true);        
+        ob.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
         // TODO add your handling code here:
-        String q=jTextField9.getText();
+        String q = jTextField9.getText();
         filter1(q);
     }//GEN-LAST:event_jTextField9KeyReleased
 
     private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
         // TODO add your handling code here:
-        Double credit = Double.parseDouble(jTextField11.getText());
-
-        double debit = Double.parseDouble(jTextField16.getText());
-        double remBal = 0;
-        double total=0;
-//                  if(debit > getBal()){
-//            JOptionPane.showMessageDialog(this, "Debit must be smaller than Balance" + getBal());
-//            jTextField16.setText("");
-//            jTextField13.setText(String.valueOf(getBal()));
-//        }
-//        else
-        {
-            total = credit-debit;
-        
-             remBal=getBal()+total;
-        jTextField13.setText(String.valueOf(remBal));
-            
-        }
     }//GEN-LAST:event_jTextField11KeyReleased
 
     private void jTextField11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
     }//GEN-LAST:event_jTextField11KeyTyped
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField12ActionPerformed
 
     private void jTextField12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyReleased
         // TODO add your handling code here:
-       int qty =Integer.parseInt(jTextField15.getText());
-       int rate =Integer.parseInt( jTextField12.getText());
-       int gst = (17*(qty*rate))/100;
-       int price = (qty*rate)+gst;
-       String result = String.valueOf(price);
-        jTextField14.setText(result);
     }//GEN-LAST:event_jTextField12KeyReleased
 
     private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
-         // TODO add your handling code here:
-        char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
             evt.consume();
         }
     }//GEN-LAST:event_jTextField12KeyTyped
 
     private void jTextField13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField13KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
     }//GEN-LAST:event_jTextField13KeyTyped
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String sd = dateFormat.format(jDateChooser2.getDate());
         String partyName = (String) jComboBox2.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-        
-        try{
-            String sql = "insert into purchasse(date,party_id,quantiy_of_bage,rate,total_price,credit,debit,remaining_balance) values(?,?,?,?,?,?,?,?)";
-            pst =conn.prepareStatement(sql);
-            pst.setString(1,sd);
-//            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
-            pst.setInt(2,id);
-            pst.setInt(3,Integer.parseInt(jTextField15.getText()));
-            pst.setInt(4,Integer.parseInt(jTextField12.getText()));
-            pst.setInt(5,Integer.parseInt(jTextField14.getText()));
-            pst.setInt(6,Integer.parseInt(jTextField11.getText()));
-            pst.setInt(7,Integer.parseInt(jTextField16.getText()));
-            pst.setInt(8,Integer.parseInt(jTextField13.getText()));
+        int id = Integer.parseInt(getPartyId(partyName));
+
+        try {
+            String sql = "insert into purchasse(date,party_id,quantiy_of_bage,rate,total_price,credit,debit,remaining_balance,invoice,description,weight,weightinlbs,withoutgst) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            //            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
+            pst.setInt(2, id);
+            pst.setInt(3, Integer.parseInt(jTextField15.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField12.getText()));
+            pst.setDouble(5, Double.parseDouble(jTextField14.getText()));
+            pst.setDouble(6, Double.parseDouble(jTextField11.getText()));
+            pst.setDouble(7, Double.parseDouble(jTextField16.getText()));
+            pst.setDouble(8, Double.parseDouble(jTextField13.getText()));
+            pst.setInt(9, Integer.parseInt(jTextField21.getText()));
+            pst.setString(10, textArea2.getText());
+            pst.setDouble(11, Double.parseDouble(jTextField20.getText()));
+            pst.setDouble(12, Double.parseDouble(jTextField22.getText()));
+            pst.setDouble(13, Double.parseDouble(jTextField24.getText()));
             pst.execute();
             pst.close();
             String updateBalance = "update Balance set balance=? where parties_id=?";
-                    pst = conn.prepareStatement(updateBalance);
-                    pst.setInt(1, Integer.parseInt(jTextField13.getText()));
-                    pst.setInt(2, id);
-                    pst.executeUpdate();
-                    pst.close();
+            pst = conn.prepareStatement(updateBalance);
+            pst.setInt(1, Integer.parseInt(jTextField8.getText()));
+            pst.setInt(2, id);
+            pst.executeUpdate();
+            pst.close();
             resetFields1();
             setTable1();
             JOptionPane.showMessageDialog(this, "Data Entered Succesfully");
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
     }//GEN-LAST:event_jButton9ActionPerformed
@@ -2178,85 +2520,84 @@ public double get_General_Bal(){
         setaddEnable1();
     }//GEN-LAST:event_jButton10ActionPerformed
 
+    private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14ActionPerformed
+
     private void jTextField14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField14KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
-        
     }//GEN-LAST:event_jTextField14KeyTyped
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
-          try{
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String sd = dateFormat.format(jDateChooser2.getDate());
-        String partyName = (String) jComboBox2.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-        String sql = "update Purchasse set date=?,party_id=?,quantiy_of_bage=?,rate=?,total_price=?,credit=?,debit=?,remaining_balance=?  where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.setString(1, sd);
-        pst.setInt(2, id);
-        pst.setInt(3, Integer.parseInt(jTextField15.getText().toString()));
-        pst.setInt(4, Integer.parseInt(jTextField12.getText().toString()));
-        pst.setInt(5, Integer.parseInt(jTextField14.getText().toString()));
-        pst.setInt(6, Integer.parseInt(jTextField11.getText().toString()));
-        pst.setInt(7, Integer.parseInt(jTextField16.getText().toString()));
-        pst.setInt(8, Integer.parseInt(jTextField13.getText().toString()));
-                
-                pst.executeUpdate();
-                pst.close();
-                int dialogButton = JOptionPane.YES_NO_OPTION;
-                 int dialogResult = JOptionPane.showConfirmDialog (null, "Would You Like to Update Balance also","Warning",dialogButton);
-                    if(dialogResult == JOptionPane.YES_OPTION){
-                      String updateBalance = "update Balance set balance=? where parties_id=?";
-                    pst = conn.prepareStatement(updateBalance);
-                    pst.setInt(1, Integer.parseInt(jTextField8.getText()));
-                    pst.setInt(2, id);
-                    pst.executeUpdate();
-                    pst.close();
-                        }
-               
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String sd = dateFormat.format(jDateChooser2.getDate());
+            String partyName = (String) jComboBox2.getSelectedItem();
+            int id = Integer.parseInt(getPartyId(partyName));
+            String sql = "update Purchasse set date=?,party_id=?,quantiy_of_bage=?,rate=?,total_price=?,credit=?,debit=?,remaining_balance=?,invoice=?,description=?,weight=?,weightinlbs=?,withoutgst=?  where id=" + getSId();
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            pst.setInt(2, id);
+            pst.setInt(3, Integer.parseInt(jTextField15.getText().toString()));
+            pst.setDouble(4, Double.parseDouble(jTextField12.getText().toString()));
+            pst.setDouble(5, Double.parseDouble(jTextField14.getText().toString()));
+            pst.setDouble(6, Double.parseDouble(jTextField11.getText().toString()));
+            pst.setDouble(7, Double.parseDouble(jTextField16.getText().toString()));
+            pst.setDouble(8, Double.parseDouble(jTextField13.getText().toString()));
+            pst.setInt(9, Integer.parseInt(jTextField21.getText()));
+            pst.setString(10, textArea2.getText());
+            pst.setDouble(11, Double.parseDouble(jTextField20.getText()));
+            pst.setDouble(12, Double.parseDouble(jTextField22.getText()));
+            pst.setDouble(12, Double.parseDouble(jTextField24.getText()));
+            pst.setDouble(13, Double.parseDouble(jTextField24.getText()));
+            pst.executeUpdate();
+            pst.close();
+            String updateBalance = "update Balance set balance=? where parties_id=?";
+            pst = conn.prepareStatement(updateBalance);
+            pst.setInt(1, Integer.parseInt(jTextField8.getText()));
+            pst.setInt(2, id);
+            pst.executeUpdate();
+            pst.close();
             resetFields1();
             setTable1();
+            setaddEnable1();
             JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
 
-       
-        
-            
-        }catch(Exception e){
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
-    }
-          
+        }
+
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-      try{
-        String sql = "delete from purchasse where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.execute();
-        pst.close();
-        resetFields1();
+        System.out.println(this.getSId());
+        try {
+            String sql = "delete from purchasse where id=" + this.getSId();
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+            pst.close();
+            resetFields1();
             setTable1();
-            JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
-            
-        }catch(Exception e){
+            setaddEnable1();
+            JOptionPane.showMessageDialog(this, "Data Deleted Succesfully");
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
     }//GEN-LAST:event_jButton12ActionPerformed
@@ -2267,77 +2608,48 @@ public double get_General_Bal(){
 
     private void jTextField15KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyReleased
         // TODO add your handling code here:
-           // TODO add your handling code here:
-       int qty =Integer.parseInt(jTextField15.getText());
-       int rate =Integer.parseInt( jTextField12.getText());
-       int gst = (17*(qty*rate))/100;
-       int price = (qty*rate)+gst;
-       String result = String.valueOf(price);
-        jTextField14.setText(result);
-        
     }//GEN-LAST:event_jTextField15KeyReleased
 
     private void jTextField15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
     }//GEN-LAST:event_jTextField15KeyTyped
+
+    private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField16ActionPerformed
 
     private void jTextField16KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField16KeyReleased
         // TODO add your handling code here:
-        double credit = Double.parseDouble(jTextField11.getText());
-
-        double debit = Double.parseDouble(jTextField16.getText());
-        double remBal = 0;
-        double total=0;
-//          if(debit > getBal()){
-//            JOptionPane.showMessageDialog(this, "Debit must be smaller than Balance" + getBal());
-//            jTextField16.setText("");
-//            jTextField13.setText(String.valueOf(getBal()));
-//        }
-//        else
-        {
-            total = credit-debit;
-        
-             remBal=getBal()+total;
-        jTextField13.setText(String.valueOf(remBal));
-            
-        }
-            
-        
-       
     }//GEN-LAST:event_jTextField16KeyReleased
 
     private void jTextField16KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField16KeyTyped
         // TODO add your handling code here:
-         char c=evt.getKeyChar();
-        if(!(Character.isDigit(c) || (c==KeyEvent.VK_BACKSPACE) || c==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
     }//GEN-LAST:event_jTextField16KeyTyped
 
     private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
         // TODO add your handling code here:
-       dm=(DefaultTableModel) jTable2.getModel();
-       int i=0;
-       i=jTable2.getSelectedRow();
-       setSId(Integer.parseInt(dm.getValueAt(i,0).toString()));
-       System.out.println(Integer.parseInt(dm.getValueAt(i,0).toString()));
+        dm = (DefaultTableModel) jTable2.getModel();
+        int i = 0;
+        i = jTable2.getSelectedRow();
+        setSId(Integer.parseInt(dm.getValueAt(i, 0).toString()));
         try {
-            java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
-            jDateChooser2.setDate(dateFormat );
+            java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 2).toString());
+            jDateChooser2.setDate(dateFormat);
         } catch (ParseException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-        jTextField15.setText(dm.getValueAt(i, 2).toString());
-        jTextField12.setText(dm.getValueAt(i, 3).toString());
-        jTextField14.setText(dm.getValueAt(i, 4).toString());
-        jTextField11.setText(dm.getValueAt(i, 5).toString());
-        jTextField16.setText(dm.getValueAt(i, 6).toString());
-        jTextField13.setText(dm.getValueAt(i, 7).toString());
+        jTextField21.setText(dm.getValueAt(i, 1).toString());
+        jTextField15.setText(dm.getValueAt(i, 3).toString());
+
+        jTextField12.setText(dm.getValueAt(i, 4).toString());
+        jTextField20.setText(dm.getValueAt(i, 5).toString());
+        jTextField22.setText(dm.getValueAt(i, 6).toString());
+        jTextField24.setText(dm.getValueAt(i, 7).toString());
+        jTextField14.setText(dm.getValueAt(i, 8).toString());
+        jTextField11.setText(dm.getValueAt(i, 9).toString());
+        jTextField16.setText(dm.getValueAt(i, 10).toString());
+        jTextField13.setText(dm.getValueAt(i, 11).toString());
+        textArea2.setText(dm.getValueAt(i, 12).toString());
         setaddDisable1();
     }//GEN-LAST:event_jTable2MouseClicked
 
@@ -2345,48 +2657,37 @@ public double get_General_Bal(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable2MouseReleased
 
-    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+    private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField12ActionPerformed
+    }//GEN-LAST:event_jTextField38ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void jTextField38KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField38KeyReleased
+        int qty = Integer.parseInt(jTextField15.getText());
+        double rate = Double.parseDouble(jTextField12.getText());
+        double weight = Double.parseDouble(jTextField20.getText());
+        double lbsweight = (weight * qty) * 2.2;
+        double withoutgst = lbsweight * rate;
+        double gst = (17 * (withoutgst)) / 100;
+        double price = (withoutgst) + gst;
+        String result = String.valueOf(price);
+        String result1 = String.valueOf(withoutgst);
+        String lbsresult = String.valueOf(lbsweight);
+        jTextField14.setText(result);
+        jTextField24.setText(result1);
+        jTextField22.setText(lbsresult);
+    }//GEN-LAST:event_jTextField38KeyReleased
 
-    private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField26ActionPerformed
+    private void jTextField38KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField38KeyTyped
+        char c = evt.getKeyChar();
+        if (!(Character.isDigit(c) || (c == KeyEvent.VK_BACKSPACE) || c == KeyEvent.VK_DELETE)) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_jTextField38KeyTyped
 
-    private void jTextField26KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField26KeyReleased
+    private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
         // TODO add your handling code here:
-        String q = jTextField26.getText();
-        filter3(q);
-    }//GEN-LAST:event_jTextField26KeyReleased
+    }//GEN-LAST:event_jTextField18ActionPerformed
 
-    private void jTable4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseClicked
-        // TODO add your handling code here:
-         dm=(DefaultTableModel) jTable4.getModel();
-         int i=0;
-         i=jTable4.getSelectedRow();
-         jTextField17.setText(dm.getValueAt(i, 0).toString());
-         jTextField20.setText(dm.getValueAt(i, 1).toString());
-         
-         
-    }//GEN-LAST:event_jTable4MouseClicked
-
-    private void jTable4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable4MouseReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTable4MouseReleased
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        // TODO add your handling code here:
-        
-        tab4.setVisible(true);
-        tab3.setVisible(false);
-        tab2.setVisible(false);
-        tab1.setVisible(false);
-         tab5.setVisible(false);
-    }//GEN-LAST:event_jButton13ActionPerformed
     private void jTextField19KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField19KeyReleased
@@ -2397,33 +2698,49 @@ public double get_General_Bal(){
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
-        
+
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String sd = dateFormat.format(jDateChooser3.getDate());
-  
-        
-        try{
-            String sql = "insert into Stock(date,description,quantity) values(?,?,?)";
-            pst =conn.prepareStatement(sql);
-            pst.setString(1,sd);
-//            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
-            pst.setString(2, jTextField23.getText());
-            pst.setInt(3,Integer.parseInt(jTextField19.getText()));
+
+        try {
+            String stockstring = "select * from total_stock where id=?";
+            pst = conn.prepareStatement(stockstring);
+            pst.setInt(1, 1);
+            rs = pst.executeQuery();
+            double total_stock = Double.parseDouble(rs.getString("total"));
+            double total = total_stock + Double.parseDouble(jTextField17.getText());
+            double remaining = total - Double.parseDouble(jTextField19.getText());
+            String sql = "insert into Stock(date,description,total,input,output,previous,remaining,amount) values(?,?,?,?,?,?,?,?)";
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            //            pst.setString(1,((JTextField) jDateChooser1.getDateEditor().getUiComponent()).getText());
+            pst.setString(2, textArea2.getText());
+            pst.setDouble(3, total);
+            pst.setDouble(4, Double.parseDouble(jTextField17.getText()));
+            pst.setDouble(5, Double.parseDouble(jTextField19.getText()));
+            pst.setDouble(6, total_stock);
+            pst.setDouble(7, remaining);
+            pst.setDouble(8, Double.parseDouble(jTextField25.getText()));
             pst.execute();
+            pst.close();
+            String updateBalance = "update total_stock set total=? where id=?";
+            pst = conn.prepareStatement(updateBalance);
+            pst.setDouble(1, remaining);
+            pst.setInt(2, 1);
+            pst.executeUpdate();
             pst.close();
             resetFields2();
             setTable2();
             JOptionPane.showMessageDialog(this, "Data Entered Succesfully");
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
     }//GEN-LAST:event_jButton15ActionPerformed
@@ -2437,86 +2754,77 @@ public double get_General_Bal(){
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         // TODO add your handling code here:
-    try{
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String sd = dateFormat.format(jDateChooser3.getDate());
-        
-        String sql = "update Stock set date=?,description=?,quantity=? where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.setString(1, sd);
-        pst.setString(2, jTextField23.getText());
-        pst.setInt(3, Integer.parseInt(jTextField19.getText().toString()));
-        pst.executeUpdate();
-        pst.close();
-        resetFields2();
-        setTable2();
-        setaddEnable2();
-        JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
+        try {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            String sd = dateFormat.format(jDateChooser3.getDate());
 
- 
-        }catch(Exception e){
+            String sql = "update Stock set date=?,description=?,input=?,output=?,amount=? where id=" + getSId();
+            pst = conn.prepareStatement(sql);
+            pst.setString(1, sd);
+            pst.setString(2, textArea2.getText());
+            pst.setDouble(3, Double.parseDouble(jTextField17.getText()));
+            pst.setDouble(4, Double.parseDouble(jTextField19.getText()));
+            pst.setDouble(5, Double.parseDouble(jTextField25.getText()));
+            pst.executeUpdate();
+            pst.close();
+            resetFields2();
+            setTable2();
+            setaddEnable2();
+            JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
-    }
+        }
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
         // TODO add your handling code here:
-       try{
-        String sql = "delete from Stock where id="+getSId();
-        pst = conn.prepareStatement(sql);
-        pst.execute();
-        pst.close();
-        resetFields2();
-        setTable2();
-        setaddEnable2();
-        JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
-            
-        }catch(Exception e){
+        try {
+            String sql = "delete from Stock where id=" + getSId();
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+            pst.close();
+            resetFields2();
+            setTable2();
+            setaddEnable2();
+            JOptionPane.showMessageDialog(this, "Data Updated Succesfully");
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                
+            } catch (Exception e) {
+
             }
         }
     }//GEN-LAST:event_jButton18ActionPerformed
 
-    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23ActionPerformed
-
-    private void jTextField23KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField23KeyReleased
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23KeyReleased
-
-    private void jTextField23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField23KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField23KeyTyped
-
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         // TODO add your handling code here:
-       dm=(DefaultTableModel) jTable3.getModel();
-       int i=0;
-       i=jTable3.getSelectedRow();
-       setSId(Integer.parseInt(dm.getValueAt(i,0).toString()));
+        dm = (DefaultTableModel) jTable3.getModel();
+        int i = 0;
+        i = jTable3.getSelectedRow();
+        setSId(Integer.parseInt(dm.getValueAt(i, 0).toString()));
         try {
             java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
-            jDateChooser3.setDate(dateFormat );
+            jDateChooser3.setDate(dateFormat);
         } catch (ParseException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
-       
-        jTextField23.setText(dm.getValueAt(i, 2).toString());
+
+        jTextField17.setText(dm.getValueAt(i, 2).toString());
         jTextField19.setText(dm.getValueAt(i, 3).toString());
+        jTextField25.setText(dm.getValueAt(i, 7).toString());
+        textArea2.setText(dm.getValueAt(i, 8).toString());
         setaddDisable2();
     }//GEN-LAST:event_jTable3MouseClicked
 
@@ -2524,260 +2832,7 @@ public double get_General_Bal(){
         // TODO add your handling code here:
     }//GEN-LAST:event_jTable3MouseReleased
 
-    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField17ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-        try{
-            String sql = "update Balance set Balance=? where id=?";
-            pst = conn.prepareStatement(sql);
-            pst.setString(2,jTextField17.getText());
-            pst.setString(1,jTextField20.getText());
-            //JOptionPane.showMessageDialog(this, jTextField17.getText() + jTextField20.getText());
-            pst.executeUpdate();
-            //pst.close();
-            setTable3();
-            resetFields3();
-            JOptionPane.showMessageDialog(this, "Updated Succesfully");
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-    }finally{
-            try{
-                pst.close();
-                rs.close();
-            }catch(Exception e){
-                
-            }
-        }
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        // TODO add your handling code here:
-         try{
-            String sql = "Delete  from Balance where id=?";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1,jTextField17.getText());
-//            pst.setString(1,jTextField20.getText());
-            pst.execute();
-            pst.close();
-            setTable3();
-            resetFields3();
-            JOptionPane.showMessageDialog(this,"Deleted Succesfully");
-
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-    }finally{
-            try{
-                pst.close();
-                rs.close();
-            }catch(Exception e){
-                
-            }
-        }
-    }//GEN-LAST:event_jButton19ActionPerformed
-
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-        resetFields3();
-        setTable3();
-        
-    }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jButton21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton21MouseClicked
-        // TODO add your handling code here:
-        tab1.setVisible(true);
-        tab2.setVisible(false);
-        tab3.setVisible(false);
-        tab4.setVisible(false);
-        tab5.setVisible(false);
-    }//GEN-LAST:event_jButton21MouseClicked
-
-    private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
-        // TODO add your handling code here:
-        tab1.setVisible(false);
-        tab2.setVisible(true);
-        tab3.setVisible(false);
-        tab4.setVisible(false);
-         tab5.setVisible(false);
-    }//GEN-LAST:event_jButton22MouseClicked
-
-    private void jButton23MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton23MouseClicked
-        // TODO add your handling code here:
-        tab1.setVisible(false);
-        tab2.setVisible(false);
-        tab3.setVisible(true);
-        tab4.setVisible(false);
-         tab5.setVisible(false);
-    }//GEN-LAST:event_jButton23MouseClicked
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField21ActionPerformed
-
-    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField24ActionPerformed
-
-    private void jTextField27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField27ActionPerformed
-
-    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox3ActionPerformed
-
-    private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
-        // TODO add your handling code here:
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String sd = dateFormat.format(jDateChooser4.getDate());
-        try{
-            
-            String sql = "insert into cashbook(date,credit,debit,balance,utilization,amount_utilized) values(?,?,?,?,?,?)";
-            pst = conn.prepareStatement(sql);
-            pst.setString(1,sd);
-            pst.setDouble(2,Double.parseDouble(jTextField28.getText()));
-            pst.setDouble(3,Double.parseDouble(jTextField29.getText()));  
-            pst.setDouble(4,Double.parseDouble(jTextField30.getText()));  
-            
-            pst.setString(5,((String)jComboBox3.getSelectedItem()));
-            pst.setDouble(6,Double.parseDouble(jTextField31.getText()));
-            pst.execute();
-            JOptionPane.showMessageDialog(this, "Data Added Succesfully");
-            pst.close();
-            String sql2 = "update genral_balance set date=? ,balance=?";
-            pst = conn.prepareStatement(sql2);
-            pst.setString(1,sd);
-            
-            pst.setDouble(2,Double.parseDouble(jTextField30.getText()));
-            pst.executeUpdate();
-            pst.close();
-            setTable4();
-         
-         
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_jButton25ActionPerformed
-
-    private void jButton27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton27ActionPerformed
-        // TODO add your handling code here:
-         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String sd = dateFormat.format(jDateChooser4.getDate());
-        
-        String sql = "update cashbook set date=?,credit=?,debit=?,balance=?,utilization=?,amount_utilized=?  where id="+jTextField27.getText();
-         try{
-            
-            pst = conn.prepareStatement(sql);
-            pst.setString(1,sd);
-            pst.setDouble(2,Double.parseDouble(jTextField28.getText()));
-            pst.setDouble(3,Double.parseDouble(jTextField29.getText()));
-            pst.setDouble(4,Double.parseDouble(jTextField30.getText()));
-            
-            pst.setString(5,((String)jComboBox3.getSelectedItem()));
-            pst.setDouble(6,Double.parseDouble(jTextField31.getText()));
-            pst.execute();
-            
-            pst.close();
-            String sql2 = "update genral_balance set date=? ,balance=?";
-            pst = conn.prepareStatement(sql2);
-            pst.setString(1,sd);
-            
-            pst.setDouble(2,Double.parseDouble(jTextField30.getText()));
-            pst.executeUpdate();
-            pst.close();
-            setTable4();
-            JOptionPane.showMessageDialog(this, "Updated succesfully");
-            }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-    }//GEN-LAST:event_jButton27ActionPerformed
-
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
-        // TODO add your handling code here:
-        try{
-             String sql  = "delete from cashbook where id="+jTextField27.getText();
-            pst = conn.prepareStatement(sql);
-            pst.execute();
-            
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-       
-        
-    }//GEN-LAST:event_jButton28ActionPerformed
-
-    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21ActionPerformed
-
-    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
-        // TODO add your handling code here:
-        tab4.setVisible(false);
-        tab3.setVisible(false);
-        tab2.setVisible(false);
-        tab1.setVisible(false);
-         tab5.setVisible(true);
-    }//GEN-LAST:event_jButton24ActionPerformed
-
-    private void jTable5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable5MouseClicked
-        // TODO add your handling code here:
-         dm=(DefaultTableModel) jTable5.getModel();
-         int i=0;
-         i=jTable5.getSelectedRow();
-         jTextField27.setText(dm.getValueAt(i, 0).toString());
-         try {
-            java.util.Date dateFormat = new SimpleDateFormat("dd/MM/yyyy").parse(dm.getValueAt(i, 1).toString());
-            jDateChooser4.setDate(dateFormat );
-        } catch (ParseException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-         jTextField28.setText(dm.getValueAt(i, 2).toString());
-         jTextField29.setText(dm.getValueAt(i, 3).toString());
-          
-         
-         jTextField30.setText(dm.getValueAt(i, 4).toString());
-         jTextField31.setText(dm.getValueAt(i, 6).toString());
-        
-    }//GEN-LAST:event_jTable5MouseClicked
-
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        // TODO add your handling code here:
-        resetFields4();
-        setTable4();
-    }//GEN-LAST:event_jButton26ActionPerformed
-
-    private void jTextField28KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField28KeyReleased
-        // TODO add your handling code here:
-        double pre_balance = get_General_Bal();
-        double credit = Double.parseDouble(jTextField28.getText());
-        double debit = Double.parseDouble(jTextField29.getText());
-        
-        double total = pre_balance+(credit-debit);
-        jTextField30.setText(Double.toString(total));
-    }//GEN-LAST:event_jTextField28KeyReleased
-
-    private void jTextField29KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField29KeyReleased
-        // TODO add your handling code here:
-         double pre_balance = get_General_Bal();
-        double credit = Double.parseDouble(jTextField28.getText());
-        double debit = Double.parseDouble(jTextField29.getText());
-        
-        double total = pre_balance+(credit-debit);
-        jTextField30.setText(Double.toString(total));
-    }//GEN-LAST:event_jTextField29KeyReleased
-
-    private void jButton29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton29ActionPerformed
-        // TODO add your handling code here:
-        printsell();
-    }//GEN-LAST:event_jButton29ActionPerformed
-
-    public void resetFields(){
+    public void resetFields() {
         jTextField3.setText("");
         jTextField4.setText("");
         jTextField5.setText("");
@@ -2785,10 +2840,10 @@ public double get_General_Bal(){
         jTextField7.setText("");
         jTextField8.setText("");
         jDateChooser1.setDate(null);
-        
-        
+
     }
-     public void resetFields1(){
+
+    public void resetFields1() {
         jTextField15.setText("");
         jTextField12.setText("");
         jTextField14.setText("");
@@ -2796,119 +2851,132 @@ public double get_General_Bal(){
         jTextField16.setText("");
         jTextField13.setText("");
         jDateChooser2.setDate(null);
-        
+        jTextField38.setText("");
+        jTextField37.setText("");
+        textArea2.setText("");
+
 //        pst.setString(2, jTextField23.getText());
 //            pst.setInt(3,Integer.parseInt(jTextField19.getText()));
     }
-     
-      public void resetFields2(){
-        jTextField23.setText("");
+
+    public void resetFields2() {
+        jTextField32.setText("");
+        jTextField33.setText("");
+
         jTextField19.setText("");
         jDateChooser3.setDate(null);
-       
+
     }
-       public void resetFields3(){
+
+    public void resetFields3() {
         jTextField17.setText("");
         jTextField20.setText("");
-       
-       
+
     }
-       public void resetFields4(){
-           jTextField27.setText("");
-            jTextField28.setText("");
-           jTextField29.setText("");
-           jTextField30.setText("");
-           jTextField31.setText("");
-          
-       }
-     
-     
-     
-     public void filter(String Q){
-        dm=(DefaultTableModel)jTable1.getModel();
-        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
-        
+
+    public void resetFields4() {
+        jTextField27.setText("");
+        jTextField28.setText("");
+        jTextField29.setText("");
+        jTextField30.setText("");
+        jTextField31.setText("");
+
+    }
+
+    public void filter(String Q) {
+        dm = (DefaultTableModel) jTable1.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
+
         tr.setRowFilter(RowFilter.regexFilter(Q));
         jTable1.setRowSorter(tr);
     }
-    public void filter1(String Q){
-        dm=(DefaultTableModel)jTable2.getModel();
-        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
-        
+
+    public void filter1(String Q) {
+        dm = (DefaultTableModel) jTable2.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
+
         tr.setRowFilter(RowFilter.regexFilter(Q));
         jTable2.setRowSorter(tr);
     }
-    public void filter2(String Q){
-        dm=(DefaultTableModel)jTable3.getModel();
-        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
-        
+
+    public void filter2(String Q) {
+        dm = (DefaultTableModel) jTable3.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
+
         tr.setRowFilter(RowFilter.regexFilter(Q));
         jTable3.setRowSorter(tr);
     }
-     public void filter3(String Q){
-        dm=(DefaultTableModel)jTable4.getModel();
-        TableRowSorter<DefaultTableModel> tr=new TableRowSorter<DefaultTableModel>(dm);
-        
+
+    public void filter3(String Q) {
+        dm = (DefaultTableModel) jTable4.getModel();
+        TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel>(dm);
+
         tr.setRowFilter(RowFilter.regexFilter(Q));
         jTable4.setRowSorter(tr);
     }
-    public void setaddDisable(){
+
+    public void setaddDisable() {
         jButton2.setEnabled(true);
         jButton6.setEnabled(true);
         jButton3.setEnabled(false);
-    } 
-    public void setaddEnable(){
+    }
+
+    public void setaddEnable() {
         jButton2.setEnabled(false);
         jButton3.setEnabled(true);
         jButton6.setEnabled(false);
     }
-    public void setaddDisable1(){
+
+    public void setaddDisable1() {
         jButton11.setEnabled(true);
         jButton12.setEnabled(true);
         jButton9.setEnabled(false);
-    } 
-    public void setaddEnable1(){
+    }
+
+    public void setaddEnable1() {
         jButton11.setEnabled(false);
         jButton9.setEnabled(true);
         jButton12.setEnabled(false);
-    } 
-    
-    public void setaddDisable2(){
+    }
+
+    public void setaddDisable2() {
         jButton17.setEnabled(true);
         jButton18.setEnabled(true);
         jButton15.setEnabled(false);
-    } 
-    public void setaddEnable2(){
+    }
+
+    public void setaddEnable2() {
         jButton17.setEnabled(false);
         jButton15.setEnabled(true);
         jButton18.setEnabled(false);
     }
-    public void setTable(){
-          try{
-              
+
+    public void setTable() {
+        try {
+
             getDbBalance("sell");
             String partyName = (String) jComboBox1.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-            
+            int id = Integer.parseInt(getPartyId(partyName));
+
             String sql = "select Selling.id,date,yarn_quantity as Yarn_Quantity,rate,total_price,credit,debit,remaining_balance,balance,price,invoice,description from Selling Left join Parties on Selling.party_id = Parties.id LEFT JOIN Balance on Balance.parties_id = Parties.id  where party_id=?";
 
             pst = conn.prepareStatement(sql);
             pst.setInt(1, id);
             rs = pst.executeQuery();
-            
+
             jTextField8.setText(String.valueOf(getBal()));
 //            setBal(Integer.parseInt(rs.getString("balance")));
 //                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
 //                rs.close();
             DefaultTableModel mode = new DefaultTableModel();
-            mode.setColumnIdentifiers(new Object[]{"ID","Date","Yarn Quantity","Rate","Price","Total Price(gst)","Credit","Debit","Remaining Balance","Invoice","Description"});
+            mode.setColumnIdentifiers(new Object[]{"ID", "Date", "Yarn Quantity", "Rate", "Price", "Total Price(gst)", "Credit", "Debit", "Remaining Balance", "Invoice", "Description"});
             Object[] row = new Object[11];
 //            System.out.println(rs.getArray("id"));
 //            rs.close();
-         
+
 //            ArrayList list = (ArrayList) rs;
 //            System.out.println(list);
-         while(rs.next()){
+            while (rs.next()) {
                 row[0] = rs.getString("id");
                 row[1] = rs.getString("date");
                 row[2] = rs.getString("Yarn_Quantity");
@@ -2921,37 +2989,34 @@ public double get_General_Bal(){
                 row[9] = rs.getString("invoice");
                 row[10] = rs.getString("description");
                 mode.addRow(row);
-                
-          }
-        
-              jTable1.setModel(mode);
-             // jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);  
-             
-              
+
+            }
+
+            jTable1.setModel(mode);
+            // jTable1.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);  
+
             rs.close();
-           pst.close();
-            
-            
-        }catch(Exception e){
+            pst.close();
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
     }
-    
-    public void setTable1(){
-          try{
+
+    public void setTable1() {
+        try {
             getDbBalance("purchase");
             String partyName = (String) jComboBox2.getSelectedItem();
-            int id =  Integer.parseInt(getPartyId(partyName));
-            
-            String sql = "select Purchasse.id,date,quantiy_of_bage as Bage_Quantity,rate,total_price,credit,debit,remaining_balance,balance from Purchasse Left join Parties on Purchasse.party_id = Parties.id LEFT JOIN Balance on Balance.parties_id = Parties.id  where party_id=?";
+            int id = Integer.parseInt(getPartyId(partyName));
+
+            String sql = "select Purchasse.id,date,quantiy_of_bage as Bage_Quantity,rate,total_price,credit,debit,remaining_balance,invoice,description,weight,weightinlbs,withoutgst,balance from Purchasse Left join Parties on Purchasse.party_id = Parties.id LEFT JOIN Balance on Balance.parties_id = Parties.id  where party_id=?";
 
             pst = conn.prepareStatement(sql);
             pst.setInt(1, id);
@@ -2961,142 +3026,148 @@ public double get_General_Bal(){
 //                jTable1.setModel(DbUtils.resultSetToTableModel(rs));
 //                rs.close();
             DefaultTableModel mode = new DefaultTableModel();
-            mode.setColumnIdentifiers(new Object[]{"ID","Date","Bage Quantity","Rate","Total Price","Credit","Debit","Remaining Balance"});
-            Object[] row = new Object[8];
+            mode.setColumnIdentifiers(new Object[]{"ID", "Invoice", "Date", "Bage Quantity", "Rate", "weight", "Total LBS", "Total Price", "Price With GST", "Credit", "Debit", "Remaining Balance", "Description"});
+
+            Object[] row = new Object[13];
 //            System.out.println(rs.getArray("id"));
 //            rs.close();
-         
+
 //            ArrayList list = (ArrayList) rs;
 //            System.out.println(list);
-         while(rs.next()){
+            while (rs.next()) {
                 row[0] = rs.getString("id");
-                row[1] = rs.getString("date");
-                row[2] = rs.getString("Bage_Quantity");
-                row[3] = rs.getString("rate");
-                row[4] = rs.getString("total_price");
-                row[5] = rs.getString("credit");
-                row[6] = rs.getString("debit");
-                row[7] = rs.getString("remaining_balance");
+                row[1] = rs.getString("invoice");
+                row[2] = rs.getString("date");
+                row[3] = rs.getString("Bage_Quantity");
+                row[4] = rs.getString("rate");
+                row[5] = rs.getString("weight");
+                row[6] = rs.getString("weightinlbs");
+                row[7] = rs.getString("withoutgst");
+                row[8] = rs.getString("total_price");
+                row[9] = rs.getString("credit");
+                row[10] = rs.getString("debit");
+                row[11] = rs.getString("remaining_balance");
+                row[12] = rs.getString("description");
                 mode.addRow(row);
-                
-          }
-              jTable2.setModel(mode);
-              
+
+            }
+            jTable2.setModel(mode);
+
             rs.close();
-           pst.close();
-            
-            
-        }catch(Exception e){
+            pst.close();
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
     }
-    
-        public void setTable2(){
-          try{
-            
-     
-            
+
+    public void setTable2() {
+        try {
+
             String sql = "select * from Stock";
 
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
 
             DefaultTableModel mode = new DefaultTableModel();
-            mode.setColumnIdentifiers(new Object[]{"ID","Date","Description","Quantity"});
-            Object[] row = new Object[8];
+            mode.setColumnIdentifiers(new Object[]{"ID", "Date", "Input", "Output", "Total", "Previous", "Remaining", "amount", "Description"});
+            Object[] row = new Object[9];
 //            System.out.println(rs.getArray("id"));
 //            rs.close();
-         
+
 //            ArrayList list = (ArrayList) rs;
 //            System.out.println(list);
-         while(rs.next()){
+            while (rs.next()) {
                 row[0] = rs.getString("id");
                 row[1] = rs.getString("date");
-                row[2] = rs.getString("description");
-                row[3] = rs.getString("quantity");
+                row[2] = rs.getString("input");
+                row[3] = rs.getString("output");
+                row[4] = rs.getString("total");
+                row[5] = rs.getString("previous");
+                row[6] = rs.getString("remaining");
+                row[7] = rs.getString("amount");
+                row[8] = rs.getString("description");
                 mode.addRow(row);
-                
-          }
-              jTable3.setModel(mode);
-              
+
+            }
+            jTable3.setModel(mode);
+
             rs.close();
-           pst.close();
-            
-            
-        }catch(Exception e){
+            pst.close();
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
     }
-        public void setTable3(){
-            try{
-                 String sql = "select Balance.id,Balance,Parties.name as Party_name, Parties.type as Type from Balance left join Parties on Balance.parties_id=Parties.id";
+
+    public void setTable3() {
+        try {
+            String sql = "select Balance.id,Balance,Parties.name as Party_name, Parties.type as Type from Balance left join Parties on Balance.parties_id=Parties.id";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             DefaultTableModel mode = new DefaultTableModel();
-            mode.setColumnIdentifiers(new Object[]{"ID","Balance","Party Name","Type"});
+            mode.setColumnIdentifiers(new Object[]{"ID", "Balance", "Party Name", "Type"});
             Object[] row = new Object[8];
 //            System.out.println(rs.getArray("id"));
 //            rs.close();
-         
+
 //            ArrayList list = (ArrayList) rs;
 //            System.out.println(list);
-         while(rs.next()){
+            while (rs.next()) {
                 row[0] = rs.getString("id");
                 row[1] = rs.getString("Balance");
                 row[2] = rs.getString("Party_name");
                 row[3] = rs.getString("Type");
                 mode.addRow(row);
-                
-          }
-              jTable4.setModel(mode);
-                
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+
+            }
+            jTable4.setModel(mode);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
-           
-            
+            }
         }
-        public void setTable4(){
-            try{
-                getGBalance();
-                jLabel42.setText("Pre Balance: "+Double.toString(get_General_Bal()));
-                
-                //jTextField30.setText( Double.toString(get_General_Bal()));
-             String sql = "select id,date,balance,credit,debit,utilization,amount_utilized from cashbook";
+
+    }
+
+    public void setTable4() {
+        try {
+            getGBalance();
+            jLabel42.setText("Pre Balance: " + Double.toString(get_General_Bal()));
+
+            //jTextField30.setText( Double.toString(get_General_Bal()));
+            String sql = "select id,date,balance,credit,debit,utilization,amount_utilized from cashbook";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             DefaultTableModel mode = new DefaultTableModel();
-            mode.setColumnIdentifiers(new Object[]{"ID","Date","Balance","Credit","Debit","utilization","amount_utilized"});
+            mode.setColumnIdentifiers(new Object[]{"ID", "Date", "Balance", "Credit", "Debit", "utilization", "amount_utilized"});
             Object[] row = new Object[8];
 //            System.out.println(rs.getArray("id"));
 //            rs.close();
-         
+
 //            ArrayList list = (ArrayList) rs;
 //            System.out.println(list);
-         while(rs.next()){
+            while (rs.next()) {
                 row[0] = rs.getString("id");
                 row[1] = rs.getString("date");
                 row[2] = rs.getString("balance");
@@ -3104,99 +3175,92 @@ public double get_General_Bal(){
                 row[4] = rs.getString("debit");
                 row[5] = rs.getString("utilization");
                 row[6] = rs.getString("amount_utilized");
-                
-                
-                mode.addRow(row);
-                
-          }
-              jTable5.setModel(mode);
-                
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
-//         JOptionPane.showMessageDialog(this, e);
-     }
-        }
-        }
 
-        
-    public String getPartyId(String name){
-        try{
+                mode.addRow(row);
+
+            }
+            jTable5.setModel(mode);
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
+//         JOptionPane.showMessageDialog(this, e);
+            }
+        }
+    }
+
+    public String getPartyId(String name) {
+        try {
             String sql = "select * from parties where name=?";
             pst = conn.prepareStatement(sql);
-            pst.setString(1,name);
+            pst.setString(1, name);
             rs = pst.executeQuery();
             return rs.getString("id");
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
         return null;
     }
-    
-    
-    public void setSelletCombo(){
-        try{
+
+    public void setSelletCombo() {
+        try {
             jComboBox1.removeAllItems();
             String sql = "select * from Parties where type='Seller'";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 jComboBox1.addItem(rs.getString("name"));
-                
+
             }
-            
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
     }
-    
-    public void setSelletCombo1(){
-        try{
+
+    public void setSelletCombo1() {
+        try {
             jComboBox2.removeAllItems();
             String sql = "select * from Parties where type='Purchaser'";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 jComboBox2.addItem(rs.getString("name"));
-                
+
             }
-            
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        finally{
-         try{
-             rs.close();
-             pst.close();
-         }catch(Exception e){
+        } finally {
+            try {
+                rs.close();
+                pst.close();
+            } catch (Exception e) {
 //         JOptionPane.showMessageDialog(this, e);
-     }
-     }
+            }
+        }
     }
-    public void disabletabs(){ 
+
+    public void disabletabs() {
         tab1.setVisible(true);
         tab2.setVisible(false);
         tab3.setVisible(false);
@@ -3204,66 +3268,67 @@ public double get_General_Bal(){
         tab4.setVisible(false);
         tab5.setVisible(false);
     }
-    public void getDbBalance(String type){
-        int id=0;
-        if(type == "sell"){
-            String partyName = (String) jComboBox1.getSelectedItem();
-            id =  Integer.parseInt(getPartyId(partyName));
-        }
-        if(type == "purchase"){
-            String partyName = (String) jComboBox2.getSelectedItem();
-            id =  Integer.parseInt(getPartyId(partyName));
-        }
-        
-            
-            try{
-                String sql = "select Balance from  Balance  where parties_id = ?";
-          
-                pst = conn.prepareStatement(sql);
-                pst.setInt(1, id);
-                rs = pst.executeQuery();
-                setBal(Double.parseDouble(rs.getString("Balance")));
-                pst.close();
-                rs.close();
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }finally{
-                try{
-                     pst.close();
-                    rs.close();
-                }catch(Exception e){
-                    
-                }
-               
-            }
-          
-    }
-    public void getGBalance(){
-        try{
-                String sql = "select balance from  genral_balance ";
-          
-                pst = conn.prepareStatement(sql);
 
-                rs = pst.executeQuery();
-                set_General_Bal(Double.parseDouble(rs.getString("balance")));
+    public void getDbBalance(String type) {
+        int id = 0;
+        if (type == "sell") {
+            String partyName = (String) jComboBox1.getSelectedItem();
+            id = Integer.parseInt(getPartyId(partyName));
+        }
+        if (type == "purchase") {
+            String partyName = (String) jComboBox2.getSelectedItem();
+            id = Integer.parseInt(getPartyId(partyName));
+        }
+
+        try {
+            String sql = "select Balance from  Balance  where parties_id = ?";
+
+            pst = conn.prepareStatement(sql);
+            pst.setInt(1, id);
+            rs = pst.executeQuery();
+            setBal(Double.parseDouble(rs.getString("Balance")));
+            pst.close();
+            rs.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(this, e.getMessage());
-            }finally{
-                try{
-                     pst.close();
-                    rs.close();
-                }catch(Exception e){
-                    
-                }
-               
+            } catch (Exception e) {
+
             }
-        
-        
+
+        }
+
     }
-    public void updateBalanceSheet(int balance,int credit,int debit,int party_id){
-        try{
+
+    public void getGBalance() {
+        try {
+            String sql = "select balance from  genral_balance ";
+
+            pst = conn.prepareStatement(sql);
+
+            rs = pst.executeQuery();
+            set_General_Bal(Double.parseDouble(rs.getString("balance")));
+            pst.close();
+            rs.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        } finally {
+            try {
+                pst.close();
+                rs.close();
+            } catch (Exception e) {
+
+            }
+
+        }
+
+    }
+
+    public void updateBalanceSheet(int balance, int credit, int debit, int party_id) {
+        try {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             Date d1 = new Date();
             String sd = dateFormat.format(d1);
@@ -3275,33 +3340,32 @@ public double get_General_Bal(){
             pst.setInt(4, debit);
             pst.setInt(5, party_id);
             pst.execute();
-            
-            
-            
-            
-        }catch(Exception e){
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, e.getMessage());
-        }finally{
-            try{
+        } finally {
+            try {
                 pst.close();
                 rs.close();
-                
-            }catch(Exception e){
-                
+
+            } catch (Exception e) {
+
             }
         }
     }
-    public void printsell(){
+
+    public void printsell() {
         MessageFormat header = new MessageFormat("Selling Page Print");
         MessageFormat footer = new MessageFormat("This is the footer of page");
-        try{
-            jTable1.print(JTable.PrintMode.FIT_WIDTH,header,footer);
-            
-        }catch(Exception e){
+        try {
+            jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer);
+
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error in printer");
         }
-        
+
     }
+
     /**
      * @param args the command line arguments
      */
@@ -3333,7 +3397,7 @@ public double get_General_Bal(){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Main().setVisible(true);
-                
+
             }
         });
     }
@@ -3410,8 +3474,15 @@ public double get_General_Bal(){
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -3450,7 +3521,6 @@ public double get_General_Bal(){
     private javax.swing.JTextField jTextField20;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField23;
     private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField25;
     private javax.swing.JTextField jTextField26;
@@ -3460,6 +3530,12 @@ public double get_General_Bal(){
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField30;
     private javax.swing.JTextField jTextField31;
+    private javax.swing.JTextField jTextField32;
+    private javax.swing.JTextField jTextField33;
+    private javax.swing.JTextField jTextField36;
+    private javax.swing.JTextField jTextField37;
+    private javax.swing.JTextField jTextField38;
+    private javax.swing.JTextField jTextField39;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
@@ -3471,8 +3547,8 @@ public double get_General_Bal(){
     private javax.swing.JPanel tab3;
     private javax.swing.JPanel tab4;
     private javax.swing.JPanel tab5;
+    private java.awt.TextArea textArea2;
+    private java.awt.TextArea textArea3;
     // End of variables declaration//GEN-END:variables
-
-
 
 }
